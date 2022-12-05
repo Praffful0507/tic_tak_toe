@@ -34,7 +34,8 @@ p{
     font-family: 'Baloo bhaina 2', cursive;
 }
 .imgbox img{
-    display: none;
+    width: 0;
+    transition: width is ease-in-out;
 }
 .br{
     border-right: 0;
