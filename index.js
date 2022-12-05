@@ -17,15 +17,16 @@ const checkWin = () =>{
 // game logic 
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element =>{
-    let boxtext = document.querySelector('.boxtext');
+    let boxtext = element.querySelector('.boxtext');
+    console.log(boxtext);
     element.addEventListener('click', (e)=>{
-        if(e.innerText === ''){
+        if(boxtext.innerText === ''){
             console.log("x");
-            e.innerText = turn;
+            boxtext.innerText = turn;
             changeTurn();
             ting.play();
             checkWin();
-            document.getElementsByClassName(turn)[0].innerText = "Turn for " + turn; 
+            document.getElementsByClassName("info")[0].innerText = "Turn for " + turn; 
         }
     })
 })
